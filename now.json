@@ -1,0 +1,28 @@
+{
+  "version": 2, 
+  "builds": [
+    {
+      "src": "build/index.js",
+      "use": "@now/node"
+    }, {
+      "src": ".env",
+      "use": "@now/static"
+    }
+  ],
+  "env": {
+    "PROJECT_ID": "@project_id",
+    "PRIVATE_KEY": "@private_key",
+    "CLIENT_EMAIL": "@client_email"
+  },
+  "routes": [
+    { 
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      },
+      "src": "/(.*)",
+      "dest": "build/index.js" 
+    }
+  ]
+}
