@@ -6,6 +6,8 @@ npm run build
 
 ## add secrets to now
 
+##
+https://zeit.co/docs/v2/serverless-functions/env-and-secrets
 
 now secrets add <key> <value>
 now secrets add private_key "$(cat .env.key | base64)"
