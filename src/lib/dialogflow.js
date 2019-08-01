@@ -3,7 +3,6 @@ const { getFulfillmentText, getRichResponses } = require('./utils');
 
 
 const dialogflowClient = new SessionsClient({
-  // keyFilename: '/Users/alex/.ssh/dialogflow/react.ai.json'
   credentials: {
     private_key: process.env.PRIVATE_KEY,
     client_email: process.env.CLIENT_EMAIL
